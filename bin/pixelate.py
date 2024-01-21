@@ -6,7 +6,7 @@ static_root = "static/"
 
 
 def recreate_image_with_n_pixels(filename, n):
-    n = math.sqrt(n) * 10
+    n = math.sqrt(n) * 5
     # Open the image file
     original_image = Image.open(static_root + filename)
 
@@ -17,7 +17,10 @@ def recreate_image_with_n_pixels(filename, n):
     new_width = int(n / new_height)
 
     # Resize the image, reducing quality
-    resized_image = original_image.resize((new_width, new_height))
+    if new_height < original_height:
+    	resized_image = original_image.resize((new_width, new_height))
+    else:
+        resized_image = original_image
 
     # Save the new image
     new_filename = str(random.randint(1, 99999999)) + "_" + filename
