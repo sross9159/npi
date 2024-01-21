@@ -9,7 +9,7 @@ pie_img = "pie.png"
 
 
 @app.route('/')
-def pass_n():
+def bake_pi():
     n = int(request.args.get('n', '1'))
     pie_file = recreate_image_with_n_pixels(pie_img, n)
     pi, time = calculate_pi(n)
