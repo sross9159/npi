@@ -18,7 +18,7 @@ def recreate_image_with_n_pixels(filename, n):
 
     # Resize the image, reducing quality
     if new_height < original_height:
-    	resized_image = original_image.resize((new_width, new_height))
+        resized_image = original_image.resize((new_width, new_height))
     else:
         resized_image = original_image
 
