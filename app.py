@@ -1,5 +1,3 @@
-import os
-
 from flask import Flask, render_template, request
 from Leibniz_pi import calculate_pi
 from pixelate import recreate_image_with_n_pixels
