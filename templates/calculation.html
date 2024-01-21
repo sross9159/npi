@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1 {text-align: center; color: ivory}
+        p {text-align: center; color: ivory}
+        form {text-align: center; color: ivory}
+        .center-image {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        body {
+            background-image: url("{{ url_for('static', filename='oven.jpg') }}");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: black;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Flask App</title>
+</head>
+<body>
+    <div>
+        <h1>Lets make Pi!</h1>
+        <p>{{ n }} iterations of Leibniz's formula for π = {{ pi }}</p>
+        <p>Which is as fine as the pie below</p>
+        <img src="/static/{{ filename }}" alt="{{ filename }}" width="400" height="400" class="center-image" />
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>Does it look tasty?</p>
+        <form action="/" method="get">
+            <label for="input_var">Try Again:</label><br>
+            <input type="text" id="input_var" name="n"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
