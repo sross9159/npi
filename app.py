@@ -10,9 +10,9 @@ pie_img = "pie.png"
 def pass_n():
     n = int(request.args.get('n', '1'))
     pie_file = recreate_image_with_n_pixels(pie_img, n)
-    pi = calculate_pi(n)
-    return render_template('calculation.html', n=n, pi=pi, filename=pie_file)
+    pi, time = calculate_pi(n)
+    return render_template('calculation.html', n=n, pi=pi, t=time, filename=pie_file)
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=80, host='0.0.0.0')
+    app.run(debug=True, port=8000, host='0.0.0.0')

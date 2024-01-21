@@ -1,3 +1,7 @@
+from timer import timer
+
+
+@timer
 def calculate_pi(n):
     # Initialize denominator
     k = 1

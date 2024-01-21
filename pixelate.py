@@ -8,7 +8,7 @@ static_root = "static/"
 def recreate_image_with_n_pixels(filename, n):
     n = math.sqrt(n) * 10
     # Open the image file
-    original_image = Image.open(filename)
+    original_image = Image.open(static_root + filename)
 
     # Calculate new size
     original_width, original_height = original_image.size
