@@ -22,19 +22,31 @@
 </head>
 <body>
     <div>
-        <h1>Let's make Pi!</h1>
-        <p>{{ n }} iterations of Leibniz's formula for π = {{ pi }}</p>
-        <p>Which is as fine as the pie below</p>
+        <h1>Let's Bake Pi!</h1>
+        <br>
+        <p>
+            {{ n }} iteration(s) of Leibniz's formula produces π = {{ pi }}<br>
+            Which is as fine as the pie below
+        </p>
         <img src="/static/{{ filename }}" alt="{{ filename }}" width="400" height="400" class="center-image" />
         <br>
         <br>
         <br>
         <br>
-        <p>Does it look tasty?</p>
+        <h1>Does it look Tasty?</h1>
         <form action="/" method="get">
             <label for="input_var">If not, try submitting a value larger than {{ n }}</label><br>
             <input type="text" id="input_var" name="n"><br>
             <input type="submit" value="Submit">
         </form>
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <p>This Pi baked for {{ t }} seconds<br>
+       Cooked through {{ n }} iterations of Leibniz's formula for π<br>
+       Which produced π = {{ pi }}<br>
+       An accuracy of {{ a }}% compared to π = 3.1415926535
+    </p>
 </body>

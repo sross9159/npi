@@ -9,4 +9,3 @@ def timer(func):
         execution_time = end_time - start_time
         return value, execution_time
     return wrapper
-
